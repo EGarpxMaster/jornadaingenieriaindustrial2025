@@ -1,5 +1,5 @@
 {
-  "name": "jii2025-react",
+  "name": "jornadaingenieriaindustrial",
   "private": true,
   "homepage": "https://egarpxmaster.github.io/jornadaingenieriaindustrial/",
   "version": "0.0.0",
@@ -10,8 +10,9 @@
     "build": "npm run build:frontend && npm --prefix server run build",
     "build:frontend": "vite build",
     "preview": "vite preview",
+
     "predeploy": "npm run build:frontend",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
