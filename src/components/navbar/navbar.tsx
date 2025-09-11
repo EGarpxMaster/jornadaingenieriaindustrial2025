@@ -9,6 +9,7 @@ import {
   faPeopleGroup,
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom"; // Importa el componente Link
 import "./navbar.css";
 
 const Navbar = () => {
@@ -16,7 +17,6 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [navbarHidden, setNavbarHidden] = useState(false);
 
-  // refs para scroll y rAF
   const lastScrollTopRef = useRef(0);
   const tickingRef = useRef(false);
 
@@ -25,12 +25,10 @@ const Navbar = () => {
     setOpenDropdown(null);
   }, []);
 
-  // Toggle dropdown
   const toggleDropdown = (dropdownId: string) => {
     setOpenDropdown((prev) => (prev === dropdownId ? null : dropdownId));
   };
 
-  // Scroll (optimizado con rAF)
   const handleScroll = useCallback(() => {
     const work = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -50,7 +48,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  // Cerrar con Escape + devolver foco al botón
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -63,7 +60,6 @@ const Navbar = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  // Bloquear scroll del body cuando el menú móvil está abierto
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
     return () => {
@@ -71,26 +67,24 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
-  // resaltar link activo sin React Router (simple por pathname)
+  // Ya no necesitas esta función
   const isActive = (href: string) =>
     typeof window !== "undefined" && window.location?.pathname === href;
 
   return (
     <nav className={`navbar ${navbarHidden ? "navbar-hidden" : ""}`} id="mainNav">
       <div className="navbar-container" role="navigation" aria-label="Principal">
-        {/* Logo izquierdo */}
         <div className="navbar-logo">
-          <a href="/"  aria-label="Ir a inicio">
+          {/* Usa Link para la navegación interna */}
+          <Link to="/" aria-label="Ir a inicio">
             <img
-              src="/assets/images/LogoUnificado_Blanco.png"
+              src={import.meta.env.BASE_URL + "/assets/images/LogoUnificado_Blanco.png"}
               alt="Logotipo de la Jornada de Ingeniería Industrial"
             />
-          </a>
+          </Link>
         </div>
 
-        {/* Contenedor central para los enlaces */}
         <div className="nav-links-container">
-          {/* Toggle móvil */}
           <button
             className="menu-toggle"
             aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
@@ -104,19 +98,18 @@ const Navbar = () => {
             <span className="menu-text">Menú</span>
           </button>
 
-          {/* Menú */}
           <div className={`menu ${isMenuOpen ? "show" : ""}`} id="mainMenu">
             <div className="nav-item">
-              <a
-                href="/" id="homebtn"
+              <Link
+                to="/"
+                id="homebtn"
                 className={`nav-link ${isActive("/#") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faHome} className="home-icon" />
                 Inicio
-              </a>
+              </Link>
             </div>
-            {/* Dropdown: Nuestra Jornada */}
             <div className="nav-item dropdown">
               <button
                 className="nav-link dropdown-header"
@@ -127,19 +120,18 @@ const Navbar = () => {
                 <span>Nuestra Jornada</span>
                 <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
               </button>
-
               <div
                 id="submenu-nuestra-jornada"
                 className={`dropdown-content ${openDropdown === "nuestraJornada" ? "show" : ""}`}
                 role="menu"
                 tabIndex={-1}
                 onBlur={(e) => {
-                  // cierra si el foco sale del contenedor
                   if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                     setOpenDropdown(null);
                   }
                 }}
               >
+                {/* Estos son enlaces de anclaje, no necesitan ser Links de React Router */}
                 <a href="#acerca" className="dropdown-item" onClick={closeNavbar} role="menuitem">
                   Acerca de
                 </a>
@@ -159,76 +151,76 @@ const Navbar = () => {
             </div>
 
             <div className="nav-item">
-              <a
-                href="/historia"
+              <Link
+                to="/historia"
                 className={`nav-link ${isActive("/historia") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faClock} className="home-icon" />
                 Historia
-              </a>
+              </Link>
             </div>
 
             <div className="nav-item">
-              <a
-                href="/actividades"
+              <Link
+                to="/actividades"
                 className={`nav-link ${isActive("/actividades") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faPersonRunning} className="home-icon" />
                 Actividades
-              </a>
+              </Link>
             </div>
 
             <div className="nav-item">
-              <a
-                href="/staff"
+              <Link
+                to="/staff"
                 className={`nav-link ${isActive("/staff") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faClock} className="home-icon" />
                 Staff
-              </a>
+              </Link>
             </div>
 
             <div className="nav-item">
-              <a
-                href="/concurso"
+              <Link
+                to="/concurso"
                 className={`nav-link ${isActive("/concurso") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faAward} className="home-icon" />
                 Concurso
-              </a>
+              </Link>
             </div>
 
             <div className="nav-item">
-              <a
-                href="/aliados"
+              <Link
+                to="/aliados"
                 className={`nav-link ${isActive("/aliados") ? "is-active" : ""}`}
                 onClick={closeNavbar}
               >
                 <FontAwesomeIcon icon={faPeopleGroup} className="home-icon" />
                 Aliados
-              </a>
+              </Link>
             </div>
 
             <div className="nav-item">
-              <a
-                href="/registro"
+              <Link
+                to="/registro"
                 className="nav-link btn-registro"
                 onClick={closeNavbar}
               >
                 Registro
-              </a>
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Logo derecho */}
         <div className="navbar-logo2">
+          {/* Este es un enlace externo, por lo que una etiqueta <a> está bien */}
           <a href="https://unicaribe.mx/" aria-label="Ir al sitio de Universidad del Caribe">
-            <img src="/assets/images/LogoUnicaribe_Blanco.png" alt="Logotipo Universidad del Caribe" />
+            <img src={import.meta.env.BASE_URL + "/assets/images/LogoUnicaribe_Blanco.png"} alt="Logotipo Universidad del Caribe" />
           </a>
         </div>
       </div>

@@ -14,7 +14,7 @@ const EventInfo: FC = () => {
         de actividades académicas y de integración diseñadas con base en el perfil de egreso
         de este Programa Educativo, para favorecer el intercambio de conocimientos y experiencias
         entre los asistentes.`,
-      image: '/assets/images/carousel/comite.jpg'
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/comite.jpg'
     },
     {
       id: "objetivo",
@@ -22,7 +22,7 @@ const EventInfo: FC = () => {
       content: `Generar un espacio de encuentro entre estudiantes, académicos, egresados, empleadores,
         investigadores e interesados en el ejercicio de la Ingeniería Industrial para la difusión
         de su alcance, impacto y tendencias a nivel nacional e internacional.`,
-      image: '/assets/images/carousel/img1.jpg'
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img1.jpg'
     },
     {
       id: "publico",
@@ -30,7 +30,7 @@ const EventInfo: FC = () => {
       content: `Estudiantes, académicos, egresados, empleadores, investigadores e interesados
         en el ejercicio de la Ingeniería Industrial que busquen conocer el alcance,
         impacto y tendencias de esta disciplina a nivel nacional e internacional.`,
-      image: '/assets/images/carousel/img2.jpg'
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img2.jpg'
     },
     {
       id: "mision",
@@ -40,7 +40,7 @@ const EventInfo: FC = () => {
         en su entorno; capaces de aplicar el conocimiento y la cultura para el desarrollo
         humano. Realizar investigación y extensión universitaria relevantes, para contribuir al
         progreso social, económico y cultural del Estado y del País.`,
-      image: '/assets/images/carousel/img3.jpg'
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img3.jpg'
     },
     {
       id: "vision",
@@ -55,7 +55,7 @@ const EventInfo: FC = () => {
         nacionales e internacionales, logrando niveles de competitividad y posicionamiento altos, basados
         en el logro de indicadores de eficiencia, impacto y satisfacción de empleadores, egresados,
         gobierno, sector productivo y sociedad en general.`,
-      image: '/assets/images/carousel/img4.jpg'
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img4.jpg'
     }
   ];
 
@@ -82,7 +82,7 @@ const EventInfo: FC = () => {
                   alt={section.title}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = '/assets/images/placeholder.jpg';
+                    target.src = import.meta.env.BASE_URL + '/assets/images/placeholder.jpg';
                   }}
                 />
               </div>

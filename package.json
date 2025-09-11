@@ -5,15 +5,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -n web,api \"npm run dev:frontend\" \"npm --prefix server run dev\"",
-    "dev:frontend": "vite",
-    "build": "npm run build:frontend && npm --prefix server run build",
-    "build:frontend": "vite build",
-    "preview": "vite preview",
-
-    "predeploy": "npm run build:frontend",
-    "deploy": "gh-pages -d build"
-  },
+  "dev": "concurrently -k -n web,api \"npm run dev:frontend\" \"npm --prefix server run dev\"",
+  "dev:frontend": "vite",
+  "build": "npm run build:frontend && npm --prefix server run build",
+  "build:frontend": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build:frontend",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-brands-svg-icons": "^7.0.0",

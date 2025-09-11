@@ -6,27 +6,27 @@ const Carousel = () => {
 
   const slides = [
     {
-      image: '/assets/images/carousel/comite.jpg',
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/comite.jpg',
       title: 'Comité Organizador',
       description: 'Equipo responsable de la Jornada de Ingeniería Industrial 2025',
     },
     {
-      image: '/assets/images/carousel/img1.jpg',
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img1.jpg',
       title: 'Actividades Académicas',
       description: 'Ponencias y talleres para el desarrollo profesional',
     },
     {
-      image: '/assets/images/carousel/img2.jpg',
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img2.jpg',
       title: 'Participación Estudiantil',
       description: 'Involucramiento activo de los futuros ingenieros industriales',
     },
     {
-      image: '/assets/images/carousel/img3.jpg',
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img3.jpg',
       title: 'Concursos y Sorteos',
       description: 'Para el cierre de la Jornada se realizan concursos y sorteos con diversos premios',
     },
     {
-      image: '/assets/images/carousel/img4.jpg',
+      image: import.meta.env.BASE_URL + '/assets/images/carousel/img4.jpg',
       title: 'Conoce nuestra historia',
       description: 'Historia de la Jornada de Ingenieria Industrial',
     },
@@ -61,7 +61,7 @@ const Carousel = () => {
               className="carousel-image"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = '/assets/images/placeholder.jpg';
+                target.src = import.meta.env.BASE_URL + '/assets/images/placeholder.jpg';
               }}
             />
             <div className="carousel-content">

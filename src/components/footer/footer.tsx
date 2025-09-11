@@ -15,7 +15,7 @@ function Footer() {
         <div className="footer-content">
           <a href="/" className="footer-logo">
             <img 
-              src="/assets/images/LogoUnificado_Blanco.png" 
+              src={import.meta.env.BASE_URL + "/assets/images/LogoUnificado_Blanco.png"} 
               alt="Logo Jornada de Ingeniería Industrial"
             />
             <span>Jornada de Ingeniería Industrial</span>
