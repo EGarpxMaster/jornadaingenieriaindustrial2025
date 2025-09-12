@@ -30,14 +30,14 @@ const activitiesData: Activity[] = [
   {
     id: "C1",
     kind: "conference",
-    banner: "/assets/images/actividades/banners/C1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C1.jpg",
     title: "Del dato a la decisión: cómo pensar como un ingeniero y actuar como un financiero",
     description:
       "Se aborda la gestión de operaciones desde una perspectiva financiera, resaltando la importancia de integrar el pensamiento de negocios en la práctica profesional.",
     speakers: [
       {
         name: "Lic. Aaron Zavala Serrano",
-        image: "/assets/images/actividades/ponentes/Lic.AaronZavala.jpeg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Lic.AaronZavala.jpeg",
         bio: "Profesional en gestión de negocios y optimización de procesos, con más de 11 años de experiencia integrando áreas operativas y de análisis para impulsar el control financiero.",
         institution: "Playa Hotels & Resorts",
       },
@@ -54,14 +54,14 @@ const activitiesData: Activity[] = [
   {
     id: "C2",
     kind: "conference",
-    banner: "/assets/images/actividades/banners/C2.jpeg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C2.jpeg",
     title: "Optimización en una línea de producción: un caso real",
     description:
       "Un experto en modelación y optimización de sistemas complejos presenta un caso de estudio sobre los beneficios de la vinculación universidad-industria.",
     speakers: [
       {
         name: "Dr. Miguel Mata Pérez",
-        image: "/assets/images/actividades/ponentes/Dr.MiguelMata.jpeg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dr.MiguelMata.jpeg",
         bio: "Experto en modelación y optimización de sistemas complejos y de gran escala. Ha sido asesor en más de 20 proyectos de vinculación universidad-industria.",
         institution: "Universidad Autónoma de Nuevo León",
       },
@@ -77,14 +77,14 @@ const activitiesData: Activity[] = [
   {
     id: "C3",
     kind: "conference",
-    banner: "/assets/images/actividades/banners/C3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C3.jpg",
     title: "Ingeniería en capas: como la manufactura aditiva construye el futuro",
     description:
       "Descubre cómo la impresión 3D está revolucionando los procesos industriales mediante el diseño funcional, materiales sostenibles y prototipado inteligente.",
     speakers: [
       {
         name: "Dra. Cynthia Graciela Flores Hernández",
-        image: "/assets/images/actividades/ponentes/Dra.CynthiaFlores.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dra.CynthiaFlores.jpg",
         bio: "Investigadora SNI nivel 1 con 15 años de experiencia. Sus intereses incluyen la síntesis de materiales compuestos y la fabricación de polímeros mediante impresión 3D.",
         institution: "ITESM / TecNM campus Querétaro",
       },
@@ -100,14 +100,14 @@ const activitiesData: Activity[] = [
   {
     id: "C4",
     kind: "conference",
-    banner: "/assets/images/actividades/banners/C4.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C4.jpg",
     title: "Mis obligaciones con el SAT en mi vida laboral - \"Hasta que la muerte nos separe\"",
     description:
       "Dar a conocer los procedimientos y documentación para el cumplimiento de obligaciones fiscales, con la finalidad que los egresados de la Universidad se integren a la vida laboral.",
     speakers: [
       {
         name: "Mtro. Fernando Pérez Castillo",
-        image: "/assets/images/actividades/ponentes/Mtro.FernandoPerez.png",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Mtro.FernandoPerez.png",
         bio: "Licenciado en Contaduría por la Universidad Autónoma de Guerrero, Maestro en Derecho Fiscal y Licenciado en Derecho por la Universidad del Sur Campus Cancún. Ha desarrollado su trayectoria como Contador General en el sector turístico y actualmente es docente en la Universidad del Caribe.",
         institution: "Universidad del Caribe",
       },
@@ -125,14 +125,14 @@ const activitiesData: Activity[] = [
   {
     id: "C5",
     kind: "conference",
-    banner: "/assets/images/actividades/banners/C4.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C4.jpg",
     title: "3 Herramientas para un proyecto de vida",
     description:
       "Ofrece a los participantes una visión práctica sobre cómo planear su futuro personal y profesional. Se presentarán tres recursos clave que permiten alinear metas con los retos de la Ingeniería Industrial.",
     speakers: [
       {
         name: "Lic. Arturo Guzmán Contreras",
-        image: "/assets/images/actividades/ponentes/Lic.ArturoGuzman.jpeg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Lic.ArturoGuzman.jpeg",
         bio: "Profesional con formación en Diseño Gráfico y Teología. Fundador de Giro 180 A.C., conferencista nacional que aborda temas de liderazgo, propósito en el trabajo y desarrollo personal.",
         institution: "Giro 180 A.C.",
       },
@@ -151,14 +151,14 @@ const activitiesData: Activity[] = [
   {
     id: "W1",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W1.jpg",
     title: "Introducción a la teoría de inventarios: de la teoría básica a la complejidad de la aplicación.",
     description:
       "Taller práctico sobre la creación de herramientas cuantitativas para la toma de decisiones en la cadena de suministro y la gestión de inventarios.",
     speakers: [
       {
         name: "Dr. Miguel Mata Pérez",
-        image: "/assets/images/actividades/ponentes/Dr.MiguelMata.jpeg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dr.MiguelMata.jpeg",
         bio: "Experto en modelación y optimización de sistemas complejos y de gran escala. Ha sido asesor en más de 20 proyectos de vinculación universidad-industria.",
         institution: "Universidad Autónoma de Nuevo León",
       },
@@ -174,14 +174,14 @@ const activitiesData: Activity[] = [
   {
     id: "W2",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
     title: "Introducción a la Ingeniería de empaque y embalaje",
     description:
       "Taller intensivo que ofrece una mirada práctica y conceptual al mundo del empaque y embalaje desde una perspectiva de ingeniería.",
     speakers: [
       {
         name: "Dr. Juan José Hurtado Moreno",
-        image: "/assets/images/actividades/ponentes/Dr.JuanHurtado.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dr.JuanHurtado.jpg",
         bio: "Especialista nacional en el diseño, materiales y logística que influyen en la protección, presentación y sostenibilidad de los productos.",
         institution: "Nacional",
       },
@@ -198,14 +198,14 @@ const activitiesData: Activity[] = [
   {
     id: "W3",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
     title: "Diseña, imprime, impacta - La manufactura aditiva transforma la ingeniería",
     description:
       "Taller práctico donde descubrirás cómo preparar y fabricar tus propias piezas. Conocerás el funcionamiento de una impresora 3D FDM, el uso de filamentos y el proceso de laminado.",
     speakers: [
       {
         name: "Dra. Cynthia Graciela Flores Hernández",
-        image: "/assets/images/actividades/ponentes/Dra.CynthiaFlores.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dra.CynthiaFlores.jpg",
         bio: "Investigadora SNI nivel 1 con 15 años de experiencia. Sus intereses incluyen la síntesis de materiales compuestos y la fabricación de polímeros mediante impresión 3D.",
         institution: "ITESM / TecNM campus Querétaro",
       },
@@ -221,14 +221,14 @@ const activitiesData: Activity[] = [
   {
     id: "W4",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
     title: "Propiedades de las arenas de moldeo",
     description:
       "La fundición es un proceso fundamental en la industria metalúrgica. Conocer las propiedades de las arenas de moldeo es indispensable para asegurar la calidad del producto final.",
     speakers: [
       {
         name: "Dra. Martha Elva Pérez Ramos",
-        image: "/assets/images/actividades/ponentes/Dra.MarthaPerez.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dra.MarthaPerez.jpg",
         bio: "Egresada de la Universidad Autónoma de Querétaro en Metalurgia, con estudios de Maestría y Doctorado en Ciencias con especialidad en Materiales por el Cinvestav-IPN. Actualmente docente de tiempo completo en el TecNM campus Querétaro.",
         institution: "Tecnológico Nacional de México, campus Querétaro",
       },
@@ -246,14 +246,14 @@ const activitiesData: Activity[] = [
   {
     id: "W5",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
     title: "Modelado 3D y manuales interactivos de mantenimiento con iPhone Pro y JigSpace",
     description:
       "Taller sobre el uso de tecnologías móviles de modelado 3D y realidad aumentada aplicadas al mantenimiento industrial. Los participantes aprenderán a generar modelos tridimensionales y crear manuales interactivos.",
     speakers: [
       {
         name: "Dr. Alejandro Charbel Cárdenas León",
-        image: "/assets/images/actividades/ponentes/Dr.AlejandroCardenas.jpeg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dr.AlejandroCardenas.jpeg",
         bio: "Ingeniero, administrador y economista con amplia trayectoria en industria y docencia. Profesor Investigador de Tiempo Completo en la Universidad del Caribe, especializado en ingeniería industrial y gestión financiera.",
         institution: "Universidad del Caribe",
       },
@@ -271,14 +271,14 @@ const activitiesData: Activity[] = [
   {
     id: "W6",
     kind: "workshop",
-    banner: "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
     title: "Fundamentos prácticos de circuitos eléctricos en Corriente Alterna",
     description:
       "Taller práctico diseñado para estudiantes sin experiencia previa en electricidad, con el objetivo de desarrollar competencias básicas en el análisis y montaje de circuitos eléctricos de uso común en entornos industriales.",
     speakers: [
       {
         name: "M.E.R. Leslye Johanna Ramírez Carmona",
-        image: "/assets/images/actividades/ponentes/Mtra.LeslyeRamirez.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Mtra.LeslyeRamirez.jpg",
         bio: "Ingeniera Mecánica Electricista por la Universidad Veracruzana y Maestra en Administración de la Energía y sus Fuentes Renovables por el ITESM. Actualmente Profesora de Asignatura en el Departamento de Ciencias Básicas e Ingeniería de la Universidad del Caribe.",
         institution: "Universidad del Caribe",
       },
@@ -296,14 +296,14 @@ const activitiesData: Activity[] = [
   {
     id: "F1",
     kind: "forum",
-    banner: "/assets/images/actividades/banners/W1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W1.jpg",
     title: "Panel de egresados: “de Industrial a Industrial”",
     description:
       "Egresados exitosos comparten sus trayectorias profesionales y ofrecen valiosos consejos a las nuevas generaciones.",
     speakers: [
       {
         name: "Ing. Sofía Reyes",
-        image: "/assets/images/actividades/ponentes/ponente_placeholder_1.png",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/ponente_placeholder_1.png",
         bio: "Gerente de Proyectos en Tech Solutions, egresada de la generación 2015.",
       },
       {
@@ -322,14 +322,14 @@ const activitiesData: Activity[] = [
   {
     id: "F2",
     kind: "forum",
-    banner: "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
     title: "Conversatorio: “Movilidad Nacional e Internacional: Casos de éxito”",
     description:
       "Descubre las oportunidades de intercambio y desarrollo profesional más allá de las fronteras locales.",
     speakers: [
       {
         name: "M.C. Laura Méndez",
-        image: "/assets/images/actividades/ponentes/ponente_placeholder_3.png",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/ponente_placeholder_3.png",
         bio: "Coordinadora de Programas Internacionales con experiencia en convenios universitarios en Europa y América del Norte.",
         institution: "Universidad del Caribe",
       },
@@ -345,14 +345,14 @@ const activitiesData: Activity[] = [
   {
     id: "F3",
     kind: "forum",
-    banner: "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
     title: "Espacio académico: Movilidad de posgrado",
     description:
       "Explora las opciones de maestrías y doctorados para especializarte y potenciar tu carrera profesional.",
     speakers: [
       {
         name: "Dr. Ricardo Morales",
-        image: "/assets/images/actividades/ponentes/ponente_placeholder_4.png",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/ponente_placeholder_4.png",
         bio: "Director del Departamento de Posgrados en Ingeniería, enfocado en la investigación y desarrollo tecnológico.",
         institution: "Universidad del Caribe",
       },
