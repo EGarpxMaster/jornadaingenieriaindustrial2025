@@ -5,9 +5,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "concurrently -k -n web,api \"npm run dev:frontend\" \"npm --prefix server run dev\"",
+  "dev": "npm run dev:frontend",
   "dev:frontend": "vite",
-  "build": "npm run build:frontend && npm --prefix server run build",
+  "build": "npm run build:frontend",
   "build:frontend": "vite build",
   "preview": "vite preview",
   "predeploy": "npm run build:frontend",

@@ -30,7 +30,7 @@ const activitiesData: Activity[] = [
   {
     id: "C1",
     kind: "conference",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C1.png",
     title: "Del dato a la decisión: cómo pensar como un ingeniero y actuar como un financiero",
     description:
       "Se aborda la gestión de operaciones desde una perspectiva financiera, resaltando la importancia de integrar el pensamiento de negocios en la práctica profesional.",
@@ -54,7 +54,7 @@ const activitiesData: Activity[] = [
   {
     id: "C2",
     kind: "conference",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C2.jpeg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C2.png",
     title: "Optimización en una línea de producción: un caso real",
     description:
       "Un experto en modelación y optimización de sistemas complejos presenta un caso de estudio sobre los beneficios de la vinculación universidad-industria.",
@@ -77,7 +77,7 @@ const activitiesData: Activity[] = [
   {
     id: "C3",
     kind: "conference",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C3.png",
     title: "Ingeniería en capas: como la manufactura aditiva construye el futuro",
     description:
       "Descubre cómo la impresión 3D está revolucionando los procesos industriales mediante el diseño funcional, materiales sostenibles y prototipado inteligente.",
@@ -100,7 +100,7 @@ const activitiesData: Activity[] = [
   {
     id: "C4",
     kind: "conference",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C4.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C4.png",
     title: "Mis obligaciones con el SAT en mi vida laboral - \"Hasta que la muerte nos separe\"",
     description:
       "Dar a conocer los procedimientos y documentación para el cumplimiento de obligaciones fiscales, con la finalidad que los egresados de la Universidad se integren a la vida laboral.",
@@ -125,7 +125,7 @@ const activitiesData: Activity[] = [
   {
     id: "C5",
     kind: "conference",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C4.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/C5.png",
     title: "3 Herramientas para un proyecto de vida",
     description:
       "Ofrece a los participantes una visión práctica sobre cómo planear su futuro personal y profesional. Se presentarán tres recursos clave que permiten alinear metas con los retos de la Ingeniería Industrial.",
@@ -151,7 +151,7 @@ const activitiesData: Activity[] = [
   {
     id: "W1",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W1.png",
     title: "Introducción a la teoría de inventarios: de la teoría básica a la complejidad de la aplicación.",
     description:
       "Taller práctico sobre la creación de herramientas cuantitativas para la toma de decisiones en la cadena de suministro y la gestión de inventarios.",
@@ -174,7 +174,7 @@ const activitiesData: Activity[] = [
   {
     id: "W2",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.png",
     title: "Introducción a la Ingeniería de empaque y embalaje",
     description:
       "Taller intensivo que ofrece una mirada práctica y conceptual al mundo del empaque y embalaje desde una perspectiva de ingeniería.",
@@ -198,7 +198,7 @@ const activitiesData: Activity[] = [
   {
     id: "W3",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.png",
     title: "Diseña, imprime, impacta - La manufactura aditiva transforma la ingeniería",
     description:
       "Taller práctico donde descubrirás cómo preparar y fabricar tus propias piezas. Conocerás el funcionamiento de una impresora 3D FDM, el uso de filamentos y el proceso de laminado.",
@@ -221,14 +221,14 @@ const activitiesData: Activity[] = [
   {
     id: "W4",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W4.png",
     title: "Propiedades de las arenas de moldeo",
     description:
       "La fundición es un proceso fundamental en la industria metalúrgica. Conocer las propiedades de las arenas de moldeo es indispensable para asegurar la calidad del producto final.",
     speakers: [
       {
         name: "Dra. Martha Elva Pérez Ramos",
-        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dra.MarthaPerez.jpg",
+        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/Dra.Martha.jpg",
         bio: "Egresada de la Universidad Autónoma de Querétaro en Metalurgia, con estudios de Maestría y Doctorado en Ciencias con especialidad en Materiales por el Cinvestav-IPN. Actualmente docente de tiempo completo en el TecNM campus Querétaro.",
         institution: "Tecnológico Nacional de México, campus Querétaro",
       },
@@ -246,7 +246,7 @@ const activitiesData: Activity[] = [
   {
     id: "W5",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W5.png",
     title: "Modelado 3D y manuales interactivos de mantenimiento con iPhone Pro y JigSpace",
     description:
       "Taller sobre el uso de tecnologías móviles de modelado 3D y realidad aumentada aplicadas al mantenimiento industrial. Los participantes aprenderán a generar modelos tridimensionales y crear manuales interactivos.",
@@ -271,7 +271,7 @@ const activitiesData: Activity[] = [
   {
     id: "W6",
     kind: "workshop",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W6.png",
     title: "Fundamentos prácticos de circuitos eléctricos en Corriente Alterna",
     description:
       "Taller práctico diseñado para estudiantes sin experiencia previa en electricidad, con el objetivo de desarrollar competencias básicas en el análisis y montaje de circuitos eléctricos de uso común en entornos industriales.",
@@ -296,20 +296,15 @@ const activitiesData: Activity[] = [
   {
     id: "F1",
     kind: "forum",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/P1.png",
     title: "Panel de egresados: “de Industrial a Industrial”",
     description:
-      "Egresados exitosos comparten sus trayectorias profesionales y ofrecen valiosos consejos a las nuevas generaciones.",
+      "La Evolución del Ingeniero Industrial: Experiencias y Lecciones Aprendidas.",
     speakers: [
       {
         name: "Ing. Sofía Reyes",
         image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/ponente_placeholder_1.png",
         bio: "Gerente de Proyectos en Tech Solutions, egresada de la generación 2015.",
-      },
-      {
-        name: "Ing. Carlos Vega",
-        image: "/assets/images/actividades/ponentes/ponente_placeholder_2.png",
-        bio: "Especialista en Cadena de Suministro en Global Logistics, egresado de la generación 2017.",
       },
     ],
     modal: {
@@ -322,15 +317,33 @@ const activitiesData: Activity[] = [
   {
     id: "F2",
     kind: "forum",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/P2.png",
     title: "Conversatorio: “Movilidad Nacional e Internacional: Casos de éxito”",
     description:
-      "Descubre las oportunidades de intercambio y desarrollo profesional más allá de las fronteras locales.",
+      "Presentación de estudiantes que han realizado o están realizando movilidad nacional e internacional, compartiendo sus experiencias y aprendizajes como ejemplos de éxito.",
     speakers: [
       {
-        name: "M.C. Laura Méndez",
-        image: import.meta.env.BASE_URL + "/assets/images/actividades/ponentes/ponente_placeholder_3.png",
-        bio: "Coordinadora de Programas Internacionales con experiencia en convenios universitarios en Europa y América del Norte.",
+        name: "Jorge Castro",
+        image: "/assets/images/actividades/ponentes/ponente_placeholder_3.png",
+        bio: "",
+        institution: "Universidad del Caribe",
+      },
+      {
+        name: "Yoali Gutiérrez",
+        image: "/assets/images/actividades/ponentes/ponente_placeholder_1.png",
+        bio: "",
+        institution: "Universidad del Caribe",
+      },
+      {
+        name: "Enrique Alamilla",
+        image: "/assets/images/actividades/ponentes/ponente_placeholder_2.png",
+        bio: "",
+        institution: "Universidad del Caribe",
+      },
+      {
+        name: "Brenda Rico",
+        image: "/assets/images/actividades/ponentes/ponente_placeholder_2.png",
+        bio: "",
         institution: "Universidad del Caribe",
       },
     ],
@@ -345,7 +358,7 @@ const activitiesData: Activity[] = [
   {
     id: "F3",
     kind: "forum",
-    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/W3.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/actividades/banners/P3.png",
     title: "Espacio académico: Movilidad de posgrado",
     description:
       "Explora las opciones de maestrías y doctorados para especializarte y potenciar tu carrera profesional.",

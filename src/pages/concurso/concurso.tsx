@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 import { Trophy, Users, Clock, Target } from "lucide-react";
+import './concurso.css';
 
 type ModalSection = {
   type: "paragraph" | "bullet" | "numbered";
@@ -19,7 +20,7 @@ type Seccion = {
 const rallySteps: Seccion[] = [
   {
     id: 1,
-    banner: "/assets/images/concurso/juego1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/concurso/J1.png",
     title: "Juego 1: Pañuelo",
     modal: {
       title: "Juego 1: Pañuelo",
@@ -42,7 +43,7 @@ const rallySteps: Seccion[] = [
   },
   {
     id: 2,
-    banner: "/assets/images/concurso/juego2.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/concurso/J2.png",
     title: "Juego 2: Zoteball",
     modal: {
       title: "Juego 2: Zoteball",
@@ -66,7 +67,7 @@ const rallySteps: Seccion[] = [
   },
   {
     id: 3,
-    banner: "/assets/images/actividades/banners/C1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/concurso/J3.png",
     title: "Juego 3: Rally del tesoro",
     modal: {
       title: "Juego 3: Rally del tesoro",
@@ -90,7 +91,7 @@ const rallySteps: Seccion[] = [
   },
   {
     id: 4,
-    banner: "/assets/images/actividades/banners/C1.jpg",
+    banner: import.meta.env.BASE_URL + "/assets/images/concurso/J4.png",
     title: "Juego 4: Fútbol en parejas",
     modal: {
       title: "Juego 4: Fútbol en parejas",
@@ -197,13 +198,13 @@ function Modal({
 
 const GameCard = ({ game, onClick, className }: { game: Seccion; onClick: () => void; className: string }) => {
   return (
-    <div className={`w-72 md:w-80 cursor-pointer rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl z-10 
+    <div className={`w-72 md:w-80 cursor-pointer rounded-3xl overflow-hidden border-4 border-[#a9a9a9] shadow-2xl z-10 
               transform transition-all duration-500 hover:scale-105 hover:-translate-y-3 hover:shadow-3xl ${className}`}
       onClick={onClick}>
       <img
         src={game.banner}
         alt={game.title}
-        className="w-full block"
+        className="h-48 object-cover w-full block"
       />
 
       {/* Número */}
@@ -226,11 +227,38 @@ export default function Concurso() {
   useScrollAnimations();
 
   const positions = [
-    'md:top-[45px] md:left-[65px]',
-    'md:top-[330px] md:right-[180px]',
-    'md:top-[570px] md:left-[100px]',
-    'md:top-[750px] md:right-[50px]'
+    'md:top-[60px] md:left-[90px]',
+    'md:top-[350px] md:right-[170px]',
+    'md:top-[580px] md:left-[120px]',
+    'md:top-[750px] md:right-[80px]'
   ];
+
+  // Referencia para el contenedor de las chispas
+  const sparksContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const createSpark = () => {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.left = `${Math.random() * 100}vw`;
+      spark.style.top = `${Math.random() * 100}vh`;
+      
+      const duration = Math.random() * 2 + 1; // 1 a 3 segundos
+      const delay = Math.random() * 2; // 0 a 2 segundos
+      spark.style.animationDuration = `${duration}s`;
+      spark.style.animationDelay = `${delay}s`;
+
+      sparksContainerRef.current?.appendChild(spark);
+
+      setTimeout(() => {
+        spark.remove();
+      }, (duration + delay) * 1000);
+    };
+
+    const intervalId = setInterval(createSpark, 200);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
@@ -239,8 +267,8 @@ export default function Concurso() {
         <div className="absolute inset-0 bg-[#1b1c39]"></div>
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 pb-10 text-center text-white">
           <div className="mb-8 transform hover:scale-110 transition-transform duration-500">
-            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-4xl">
-              <img src="assets/images/concurso/logorally.jpg " alt="Logo Mundialito Industrial" className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover" />
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 bg-gradient-to-br from-blue-500 to-gray-500 flex items-center justify-center text-4xl">
+              <img src={import.meta.env.BASE_URL + "assets/images/concurso/logorally.jpg"} alt="Logo Mundialito Industrial" className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold mb-4">
@@ -303,7 +331,9 @@ export default function Concurso() {
             </div>
 
             {/* Nueva línea vertical para móvil. Ahora está dentro de la sección del tablero. */}
-            <div className="md:hidden absolute inset-x-0 top-[-3rem] bottom-0 w-2.5 bg-gradient-to-b from-gray-400 to-cyan-400 z-0 mx-auto"></div>
+            <div className="md:hidden absolute inset-x-0 top-0 bottom-0 w-2.5 bg-gradient-to-b from-gray-400 to-cyan-400 z-0 mx-auto"></div>
+
+            <div ref={sparksContainerRef} className="sparks-container"></div>
 
             {/* Contenedor de las tarjetas */}
             <div className="flex flex-col items-center gap-12 mt-12 md:mt-0 md:block">
@@ -360,3 +390,4 @@ export default function Concurso() {
     </div>
   );
 }
+
