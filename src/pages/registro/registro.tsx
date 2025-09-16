@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import RegistroComponent from "../../components/forms/registro";
+import WorkshopComponent from "../../components/forms/workshop";
 import AsistenciaComponent from "../../components/forms/asistencia";
 import ConstanciaComponent from "../../components/forms/constancias";
-import RegistroConcursoComponent from '../../components/forms/registro_concurso';
+import RegistroConcursoComponent from "../../components/forms/registro_concurso";
 import "./registro.css";
 
-
-type ActiveTab = "registro" | "asistencia" | "constancia" | "concurso";
+type ActiveTab = "registro" | "workshop" | "asistencia" | "constancia" | "concurso";
 
 const RegistroPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>("registro");
 
   const handleRegistroSuccess = () => {
-    // Cambiar automáticamente a la pestaña de asistencia después del registro exitoso
-    setTimeout(() => {
-      setActiveTab("asistencia");
-    }, 3000);
+    setTimeout(() => setActiveTab("asistencia"), 3000);
+  };
+
+  const handleWorkshopSuccess = () => {
+    alert("¡Te has registrado en el workshop con éxito!");
+    setTimeout(() => setActiveTab("constancia"), 3000);
   };
 
   return (
@@ -33,6 +35,14 @@ const RegistroPage: React.FC = () => {
               <span className="tab-text">Registro</span>
             </button>
             <button
+              className={`tab-button ${activeTab === "workshop" ? "active" : ""}`}
+              onClick={() => setActiveTab("workshop")}
+              type="button"
+            >
+              <span className="tab-icon">⚙️</span>
+              <span className="tab-text">Workshop</span>
+            </button>
+            <button
               className={`tab-button ${activeTab === "asistencia" ? "active" : ""}`}
               onClick={() => setActiveTab("asistencia")}
               type="button"
@@ -48,7 +58,6 @@ const RegistroPage: React.FC = () => {
               <span className="tab-icon">🏆</span>
               <span className="tab-text">Constancia</span>
             </button>
-
             <button
               className={`tab-button ${activeTab === "concurso" ? "active" : ""}`}
               onClick={() => setActiveTab("concurso")}
@@ -63,27 +72,19 @@ const RegistroPage: React.FC = () => {
         {/* Content */}
         <div className="tab-content">
           {activeTab === "registro" && (
-            <RegistroComponent 
-              onSuccess={handleRegistroSuccess}
-              className="tab-component"
-            />
+            <RegistroComponent onSuccess={handleRegistroSuccess} className="tab-component" />
+          )}
+          {activeTab === "workshop" && (
+            <WorkshopComponent className="tab-component" showHeader={false} />
           )}
           {activeTab === "asistencia" && (
-            <AsistenciaComponent 
-              className="tab-component"
-              showHeader={false}
-            />
+            <AsistenciaComponent className="tab-component" showHeader={false} />
           )}
           {activeTab === "constancia" && (
-            <ConstanciaComponent 
-              className="tab-component"
-              showHeader={false}
-            />
+            <ConstanciaComponent className="tab-component" showHeader={false} />
           )}
           {activeTab === "concurso" && (
-            <RegistroConcursoComponent
-              className="tab-component"
-            />
+            <RegistroConcursoComponent className="tab-component" />
           )}
         </div>
       </div>
